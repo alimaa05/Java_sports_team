@@ -24,7 +24,8 @@ public class Player {
          this.number = number;
          this.contractLength = contractLength;
      }
-     // the values you assign in the constructor will be applied for specific objects you  create
+     // the values you assign in the constructor will be applied for specific objects you create
+    // create a player that will then have these properties when created
 
     //default constructor
     public Player(){}

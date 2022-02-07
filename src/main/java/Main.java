@@ -1,4 +1,6 @@
+import pojos.Manager;
 import pojos.Player;
+import pojos.Team;
 
 public class Main {
 
@@ -19,6 +21,21 @@ public class Main {
         System.out.println(player.equals(player2));
         // this is checking equality by checking whether that have the same stuff inside them
         System.out.println("------------");
+
+        Manager manager = new Manager("Gregor Townsend");
+
+        Team scotland = new Team("scotland", manager);
+
+        System.out.println(scotland.toString());
+        System.out.println("------------");
+
+        Manager manager1 = new Manager("Gregor Townsend");
+
+        Team england = new Team("England", manager);
+
+        System.out.println(england.toString());
+        System.out.println("------------");
+
 
     }
 }
