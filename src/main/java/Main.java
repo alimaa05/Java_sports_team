@@ -1,6 +1,7 @@
 import managers.Manager;
 import players.Player;
 import teams.Team;
+import teams.TeamsService;
 
 public class Main {
 
@@ -31,10 +32,27 @@ public class Main {
 
         Manager manager1 = new Manager("Gregor Townsend");
 
-        Team england = new Team("England", manager);
+        Team england = new Team("England", manager1);
 
         System.out.println(england.toString());
         System.out.println("------------");
+
+        TeamsService teamsService = new TeamsService(); // calling on TeamService and creating a new object
+
+        // new variable which is equal to printing the nu of spaces on team in the team 'scotland'
+        int spacesBefore = teamsService.countEmptySpacesOnTeam(scotland);
+
+        System.out.println(spacesBefore);
+//        System.out.println(teamsService.countEmptySpacesOnTeam(scotland)); // printing the nu of spaces without giving it new variable name
+        System.out.println("------------");
+
+        // calling on the adding player to the team
+        teamsService.addPlayerToTeam(scotland,player);
+        // printing the nu of players on the team after player is added
+        int spacesAfter = teamsService.countEmptySpacesOnTeam(scotland);
+        System.out.println(spacesAfter);
+
+
 
 
     }
