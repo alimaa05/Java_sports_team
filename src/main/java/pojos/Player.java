@@ -1,3 +1,5 @@
+package pojos;
+
 import java.util.Objects;
 
 public class Player {
@@ -68,7 +70,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player{" +
+        return "pojos.Player{" +
                 "name='" + name + '\'' +
                 ", position='" + position + '\'' +
                 ", number=" + number +
@@ -82,11 +84,18 @@ public class Player {
         if (o == null || getClass() != o.getClass()) return false;
         Player player = (Player) o;
         return number == player.number && contractLength == player.contractLength && Objects.equals(name, player.name) && Objects.equals(position, player.position);
+        // when we compare two objects we're comparing if they're exactly the same object(living same place in memory
+        // but it doesn't compare individual properties
+        // this method overrides that checking it's not the same object
+        // but also the last line it looking at whether these two objects have the exact same properties
+
+        // differentiating between two objects living in memory
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(name, position, number, contractLength);
     }
+    // generating number
 }
 
