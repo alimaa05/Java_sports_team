@@ -47,13 +47,29 @@ public class Main {
         System.out.println("------------");
 
         // calling on the adding player to the team
-        teamsService.addPlayerToTeam(scotland,player);
+        try {
+            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+//            teamsService.addPlayerToTeam(scotland, player);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
         // printing the nu of players on the team after player is added
         int spacesAfter = teamsService.countEmptySpacesOnTeam(scotland);
         System.out.println(spacesAfter);
-
-
-
 
     }
 }
