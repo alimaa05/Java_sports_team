@@ -1,6 +1,6 @@
-import pojos.Manager;
-import pojos.Player;
-import pojos.Team;
+import managers.Manager;
+import players.Player;
+import teams.Team;
 
 public class Main {
 
